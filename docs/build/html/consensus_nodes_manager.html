@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>共识节点管理 &mdash; CITA 0.8 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CITA 0.8 文档" href="index.html"/>
+        <link rel="next" title="账号管理" href="account_manager.html"/>
+        <link rel="prev" title="节点白名单管理" href="nodes_lists.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CITA
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">依赖</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id4">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id5">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id6">运行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id7">验证</a></li>
+</ul>
+<p class="caption"><span class="caption-text">主要概念</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html">区块链</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">CITA</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统组件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc_model.html">服务网关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_model.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chain_model.html">链（Chain）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contract_model.html">合约引擎（Contract Engine）</a></li>
+</ul>
+<p class="caption"><span class="caption-text">使用指南</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc.html">RPC 调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smart_contract.html">智能合约指南</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统管理</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="nodes_lists.html">节点白名单管理</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">共识节点管理</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">共识节点管理合约接口</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="account_manager.html">账号管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quota_manager.html">配额管理</a></li>
+</ul>
+<p class="caption"><span class="caption-text">架构设计</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">系统架构</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transaction_process.html">交易处理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view.html">视图</a></li>
+</ul>
+<p class="caption"><span class="caption-text">附录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">版本发布说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">贡献代码</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CITA</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>共识节点管理</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/consensus_nodes_manager.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>共识节点管理<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>CITA作为一个面向企业级应用的区块链框架，需要保证监管方能够获得相关的权限对共识节点进行管理，包括增加、删除共识节点等操作。对于共识服务方面，需要对其提供实时读取共识节点列表的接口，而中心化管理的方式无法保证各个节点的共识节点列表的安全性及一致性。CITA采用合约的方式来实现共识节点的管理，通过区块链上的合约可以保证共识节点的安全性及一致性。</p>
+<p>在CITA初始化创世块阶段，需要初始化一个管理员地址，其拥有管理员角色，将其写入到每个节点的创世块文件中，共识节点管理合约拥有的一个固定地址也写入其中。创世块内容在初始化以后不允许被修改。区块链正常启动之后，将合约写入到创世块中。链外的操作人员可以通过调用RPC接口来实现对共识节点的管理。</p>
+<p>对于共识节点的管理，包括添加、删除及获得共识节点。</p>
+<ul class="simple">
+<li>添加操作分为发起和确认，节点先调用发起请求，申请成为共识节点，由管理员(拥有管理员角色的账号)确认才完成了添加操作;</li>
+<li>删除操作只可由管理员执行;</li>
+<li>共识服务可获得共识节点列表。</li>
+</ul>
+<p>只读节点安装生成后申请成为共识节点，需要进行以下操作：</p>
+<ul class="simple">
+<li>将账号地址提交给管理员;</li>
+<li>节点发起由管理员确认完成，合约中记录其为共识节点;</li>
+<li>和其他节点共同修改本地节点白名单;</li>
+<li>等待区块数据同步完成后即可参与下一次的共识。</li>
+</ul>
+<div class="section" id="id2">
+<h2>共识节点管理合约接口<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>准备共识节点-newNode<ul>
+<li>普通角色即可;</li>
+<li>成功后新节点准备成为共识节点，并将其记录在合约共识节点列表中，同时节点将处于new状态;</li>
+<li>传入参数address，为新增节点地址;</li>
+<li>返回类型为bool，可通过其判断操作成功与否。</li>
+</ul>
+</li>
+<li>确认共识节点-approveNode<ul>
+<li>需要管理员角色;</li>
+<li>新节点成功准备后，可调用此方法确认节点成为共识节点，同时节点将处于consensus状态;</li>
+<li>传入参数string，为新增共识节点地址;</li>
+<li>返回类型为bool，可通过其判断操作成功与否。</li>
+</ul>
+</li>
+<li>删除共识节点-deleteNode<ul>
+<li>需要管理员角色;</li>
+<li>成功后节点将从节点列表中删除，同时节点将处于close状态;</li>
+<li>传入参数为address，为节点地址;</li>
+<li>返回类型为bool，可通过其判断操作成功与否。</li>
+</ul>
+</li>
+<li>获取共识节点列表-listNode<ul>
+<li>只读方法，普通角色即可;</li>
+<li>态获取共识节点列表，即状态为consensus的节点;</li>
+<li>返回结果为string。节点列表中的多个节点会拼接成一个字符串。之后可通过解析会获得节点列表。</li>
+</ul>
+</li>
+<li>获得节点状态-getStatus<ul>
+<li>只读方法，普通角色即可;</li>
+<li>获取共识节点状态;</li>
+<li>传入参数为节点公钥;</li>
+<li>返回结果为uint8:<ul>
+<li>0表示close状态</li>
+<li>1表示new状态</li>
+<li>2表示consensus状态</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="account_manager.html" class="btn btn-neutral float-right" title="账号管理" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nodes_lists.html" class="btn btn-neutral" title="节点白名单管理" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2017, Cryptape.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

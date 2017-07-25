@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>词汇表 &mdash; CITA 0.8 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CITA 0.8 文档" href="index.html"/>
+        <link rel="next" title="版本发布说明" href="releases.html"/>
+        <link rel="prev" title="常见问题" href="faq.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CITA
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">依赖</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id4">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id5">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id6">运行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id7">验证</a></li>
+</ul>
+<p class="caption"><span class="caption-text">主要概念</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html">区块链</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">CITA</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统组件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc_model.html">服务网关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_model.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chain_model.html">链（Chain）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contract_model.html">合约引擎（Contract Engine）</a></li>
+</ul>
+<p class="caption"><span class="caption-text">使用指南</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc.html">RPC 调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smart_contract.html">智能合约指南</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统管理</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nodes_lists.html">节点白名单管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_nodes_manager.html">共识节点管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_manager.html">账号管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quota_manager.html">配额管理</a></li>
+</ul>
+<p class="caption"><span class="caption-text">架构设计</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">系统架构</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transaction_process.html">交易处理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view.html">视图</a></li>
+</ul>
+<p class="caption"><span class="caption-text">附录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">词汇表</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">区块链</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">密码学</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cita">CITA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">共识</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">版本发布说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">贡献代码</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CITA</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>词汇表</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/glossary.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>词汇表<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>区块链<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><strong>区块</strong></li>
+</ul>
+<p>一个区块是一个数据包，其中包含零个或多个交易，父块的哈希值，以及其他数据。除了初始的“创世区块”以外每个区块
+都包含它父块的哈希值，区块的全部集合被称为区块链，并且包含了一个网络里的全部交易历史。</p>
+<ul class="simple">
+<li><strong>账户</strong></li>
+</ul>
+<p>账户是在总账中的记录，由它的地址来索引，总账包含有关该账户的状态的完整的数据。在一个货币系统里，这包含了货
+币余额。</p>
+<ul class="simple">
+<li><strong>挖矿</strong></li>
+</ul>
+<p>通过暴力尝试来找到一个字符串，使得它加上一组交易信息后的哈希值符合特定规则（例如前缀包括若干个0），找到的
+人可以宣称新区块被发现，并获得系统奖励。</p>
+<ul class="simple">
+<li><strong>矿工</strong></li>
+</ul>
+<p>参与挖矿的人或组织</p>
+<ul class="simple">
+<li><strong>矿机</strong></li>
+</ul>
+<p>专门为比特币挖矿而设计得设备，包括基于软件、GPU、FPGA和专用芯片等多种实现。</p>
+<ul class="simple">
+<li><strong>矿池</strong></li>
+</ul>
+<p>采用团队协作方式来集中算力进行挖矿，对产出的虚拟货币进行分配。</p>
+<ul class="simple">
+<li><strong>P2P</strong></li>
+</ul>
+<p>点到点的通信网络，网络中所有节点地位均等，不存在中心化的控制机制。</p>
+<ul class="simple">
+<li><strong>去中心化</strong></li>
+</ul>
+<p>不存在第三方中心机构，全体网民可以共同参与、权级平等。</p>
+<ul class="simple">
+<li><strong>分布式账本</strong></li>
+</ul>
+<p>可以在多个站点、不同地理位置或者多个机构组成的网络里进行分享的资产数据库。</p>
+<ul class="simple">
+<li><strong>EVM</strong></li>
+</ul>
+<p>以太坊的虚拟机，智能合约运行的环境。</p>
+<ul class="simple">
+<li><strong>FLP Impossibility</strong></li>
+</ul>
+<p>FLP不可能性分布式领域的一个著名理论，它的结论是：在网络可靠，存在节点失效（即便只有一个）的最小化异步模型
+系统中，不存在一个可以解决一致性问题的确定性算法。</p>
+<ul class="simple">
+<li><strong>CAP</strong></li>
+</ul>
+<p>分布式计算系统不可能同时确保一致性（Consistency）、可用性（Availability）和分区容忍性（Partition），
+设计中往往需要弱化对某个特性的保证。一致性指等同于所有节点访问同一份最新的数据副本；可用性指每次请求都能
+获取到非错的响应，但是不保证获取的数据为最新数据；分区容忍性指以实际效果而言，分区相当于对通信的时限要求。
+系统如果不能在时限内达成数据一致性，就意味着发生了分区的情况，必须就当前操作在C和A之间做出选择。</p>
+<ul class="simple">
+<li><strong>女巫攻击</strong></li>
+</ul>
+<p>少数节点通过伪造或盗用身份伪装成大量节点，进而对分布式系统进行破坏。</p>
+<ul class="simple">
+<li><strong>UTXO</strong></li>
+</ul>
+<p>Unspent Transaction Outputs，未花费的输出。每一笔交易的输入都会引用先前有效交易的未花费输出，再创建新的未花费输出。账户余额就是发往该账户地址的一笔笔未花费输出的累加。</p>
+</div>
+<div class="section" id="id3">
+<h2>密码学<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>密码学是数学的一个分支，它让我们创造出可以提供很高安全性的数学证明。对于数字货币来说，密码学用来保证任何人
+都不可能使用他人钱包里的资金以及给钱包加密。</p>
+<ul class="simple">
+<li><strong>哈希</strong></li>
+</ul>
+<p>即散列算法，任意长度的二进制值映射为较短的固定长度的二进制值得算法。</p>
+<ul class="simple">
+<li><strong>非对称加密</strong></li>
+</ul>
+<p>一种特殊的加密，具有在同一时间生成两个密钥的处理（通常称为私钥和公钥），使得利用一个密钥对文档进行加密后，
+可以用另一个密钥进行解密。一般地，公钥是公开的，私钥自己保留。</p>
+<ul class="simple">
+<li><strong>数字签名</strong></li>
+</ul>
+<p>用户用私钥为文档产生一段叫做签名的短字符串数据，任何拥有相应公钥的人都可以验证该签名。</p>
+<ul class="simple">
+<li><strong>CA</strong></li>
+</ul>
+<p>Certificate Authority，负责证书的创建、颁发，在PKI体系中最为核心的角色。</p>
+<ul class="simple">
+<li><strong>PKI</strong></li>
+</ul>
+<p>Public Key Infrastructure，基于公钥体系的安全基础设施，是一组由硬件、软件、参与者、管理政策与流程组成
+的基础架构，其目的在于创造、管理、分配、使用、存储以及撤销数字证书。</p>
+<ul class="simple">
+<li><strong>Zcash</strong></li>
+</ul>
+<p>零知识证明，一种密码学技术，允许两方（证明者和验证者）来证明某个提议是真实的，而且无需泄露除了它是真实的之外的任何信息。</p>
+<ul class="simple">
+<li><strong>Merkle Tree</strong></li>
+</ul>
+<p>中文名叫默克尔树，又叫哈希树，是一种二叉树，由一个根节点、一组中间节点和一组叶节点组成。
+最下面的叶节点包含存储数据或其哈希值，每个中间节点是它的两个孩子节点内容的哈希值，根节点
+也是由它的两个子节点内容的哈希值组成。</p>
+</div>
+<div class="section" id="cita">
+<h2>CITA<a class="headerlink" href="#cita" title="永久链接至标题">¶</a></h2>
+<p>即分布式企业间流程自动化系统（Cryptape Inter-enterprise Trust Automation），本质是一个支持智能合约
+的区块链框架。CITA将区块链节点的必要功能解耦，通过消息总线交换信息相互协作，各组件是可拔插的，可以配置和定
+制相应的服务，能够满足企业级用户的全部需求。</p>
+<ul class="simple">
+<li><strong>智能合约</strong></li>
+</ul>
+<p>一段代码，被部署在分享的、复制的账本上，它可以维持自己的状态，控制自己的资产和对接收到的外界信息或者资产进行回应。</p>
+<ul class="simple">
+<li><strong>微服务</strong></li>
+</ul>
+<p>即CITA将区块链节点的各功能解耦之后的组件，如共识，交易处理，点对点网络协议等这些都是微服务。微服务架构能够
+有效提高节点处理能力，并且使CITA非常容易水平扩展。</p>
+<ul class="simple">
+<li><strong>异步交易处理</strong></li>
+</ul>
+<p>即CITA将共识和交易处理解耦为独立的微服务，共识只负责各节点对交易共识并对交易进行排序，而交易内容的处理交给
+交易处理服务，从而实现共识过程和交易处理异步执行。异步处理技术不仅使CITA具有更好的共识性能，还带来了更具弹
+性的交易处理能力。</p>
+<ul class="simple">
+<li><strong>执行器</strong></li>
+</ul>
+<p>执行器以排好序的交易为输入，在处理过程中相应的更新对应的视图。不同的执行器对于不同的交易输入可能产生不同的视图。</p>
+<ul class="simple">
+<li><strong>配额</strong></li>
+</ul>
+<p>即支持智能合约的区块链用来限制资源使用的机制。由于交易会被复制到多个节点执行和存储，过重的负荷会使有限的资源
+消耗殆尽从而导致节点失去响应。</p>
+<ul class="simple">
+<li><strong>视图</strong></li>
+</ul>
+<p>即将执行器的处理结构最终展现给具体应用的组件，用户在配置CITA区块链网络时可设定多个视图，视图相互独立。每个
+视图都可以设定相应的交易执行器和状态存储模型，并将交易执行器注册到交易路由，不同视图处理的交易子集可以有交
+集，也可以没有交集。</p>
+<ul class="simple">
+<li><strong>隐私交易</strong></li>
+</ul>
+<p>即无关节点不能看见交易中的数据，但是执行和验证智能合约要求所有共识节点都能看到交易中的数据，二者存在天然矛盾。CITA采用了交易局部执行技术，实现了一种隐私方案。</p>
+</div>
+<div class="section" id="id4">
+<h2>共识<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><strong>PoW</strong></li>
+</ul>
+<p>Proof of Work，工作量证明，在一定难题前提下求解一个 SHA256 的 Hash 问题。</p>
+<ul class="simple">
+<li><strong>PoS</strong></li>
+</ul>
+<p>Proof of Stake，权益证明，一种公有区块链中的共识算法，可作为 PoW算法的一种替换。</p>
+<ul class="simple">
+<li><strong>PBFT</strong></li>
+</ul>
+<p>Practical Byzantine Fault Tolerance，实用拜占庭容错算法。一种状态机副本复制算法，即服务作为状态机进行建模，状态机在分布式系统的不同节点进行副本复制。</p>
+<ul class="simple">
+<li><strong>Tendermint算法</strong></li>
+</ul>
+<p>拜占庭容错算法，存在少数节点作恶（如消息伪造）的情况下，依然能达成一致性。</p>
+<ul class="simple">
+<li><strong>Raft算法</strong></li>
+</ul>
+<p>非拜占庭容错算法，在一个分布式数据库系统中，如果各节点的初始状态一致，每个节点都执行相同的操作序列，那么它们最后能得到一个一致的状态。</p>
+<ul class="simple">
+<li><strong>拜占庭将军问题</strong></li>
+</ul>
+<p>又称“拜占庭容错”，或称“两军问题”，它是一个协议问题，拜占庭帝国军队的将军们必须全体一致的决定是否攻击某一支敌军。
+问题是这些将军在地理上是分隔开来的，并且将军中存在叛徒。叛徒可以任意行动以达到以下目标：欺骗某些将军采取进攻行动；
+促成一个不是所有将军都同意的决定，如当将军们不希望进攻时促成进攻行动；或者迷惑某些将军，使他们无法做出决定。如果
+叛徒达到了这些目的之一，则任何攻击行动的结果都是注定要失败的，只有完全达成一致的努力才能获得胜利。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="releases.html" class="btn btn-neutral float-right" title="版本发布说明" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="faq.html" class="btn btn-neutral" title="常见问题" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2017, Cryptape.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

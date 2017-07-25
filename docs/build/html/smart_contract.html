@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>智能合约指南 &mdash; CITA 0.8 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CITA 0.8 文档" href="index.html"/>
+        <link rel="next" title="节点白名单管理" href="nodes_lists.html"/>
+        <link rel="prev" title="RPC 调用" href="rpc.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CITA
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">依赖</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id4">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id5">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id6">运行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id7">验证</a></li>
+</ul>
+<p class="caption"><span class="caption-text">主要概念</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html">区块链</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">CITA</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统组件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc_model.html">服务网关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_model.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chain_model.html">链（Chain）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contract_model.html">合约引擎（Contract Engine）</a></li>
+</ul>
+<p class="caption"><span class="caption-text">使用指南</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rpc.html">RPC 调用</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">智能合约指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">智能合约简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">编写智能合约</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">编译合约</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">创建合约</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">调用合约</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">系统管理</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nodes_lists.html">节点白名单管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_nodes_manager.html">共识节点管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_manager.html">账号管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quota_manager.html">配额管理</a></li>
+</ul>
+<p class="caption"><span class="caption-text">架构设计</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">系统架构</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transaction_process.html">交易处理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view.html">视图</a></li>
+</ul>
+<p class="caption"><span class="caption-text">附录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">版本发布说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">贡献代码</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CITA</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>智能合约指南</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/smart_contract.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>智能合约指南<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>智能合约简介<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>智能合约是存储在区块链上的一段代码，它们可以被区块链上的交易所触发，被触发之后，这段代码可以从区块链上读取数据或者向区块链上写入数据。</p>
+<p>从用户角度来讲，智能合约通常被认为是一个自动担保账户，当特定的条件满足时，程序就会释放和转移资金。</p>
+<p>从技术角度来讲，智能合约被认为是网络服务器，只是这些服务器并不是使用IP地址架设在互联网上，而是架设在区块链上，从而可以在其上面运行特定的合约程序。</p>
+<p>智能合约是编程在区块链上的汇编语言，我们通常使用更高级的语言例如Solidity等专用语言来编写合约程序，然后将它编译成区块链可以识别的字节码。合约代码被触发后将是自动执行的，要么成功执行，要么所有的状态变化都撤消，这就避免了合约部分执行的情况。</p>
+</div>
+<div class="section" id="id3">
+<h2>编写智能合约<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>智能合约是由一组代码和数据组成的程序，位于以太坊区块链上的一个特殊地址中。我们以Solidity编写智能合约为例，简单介绍一下如何编写一个规范的合约程序，合约 <code class="docutils literal"><span class="pre">HelloWorld.sol</span></code> 的代码如下：</p>
+<div class="highlight-none"><div class="highlight"><pre>pragma solidity ^0.4.0;
+
+contract HelloWorld {
+    uint balance;
+
+    function update(uint amount) returns (address, uint) {
+        balance += amount;
+        return (msg.sender, balance);
+    }
+}
+</pre></div>
+</div>
+<p>说明：上述示例中 <code class="docutils literal"><span class="pre">uint</span> <span class="pre">balance</span></code> 表示声明了一个状态变量，类型为 <code class="docutils literal"><span class="pre">uint</span></code> （即256位的无符号整数）。 <code class="docutils literal"><span class="pre">function</span> <span class="pre">update(uint</span> <span class="pre">amount)</span> <span class="pre">returns</span> <span class="pre">(address,</span> <span class="pre">uint)</span></code> 表示一个函数，其中参数为 <code class="docutils literal"><span class="pre">amount</span></code> ，返回值为一个元组 <code class="docutils literal"><span class="pre">(address,</span> <span class="pre">unit)</span></code> ，函数中返回值可以只给出类型，而无需具体的变量名。该函数的功能是更新 <code class="docutils literal"><span class="pre">HelloWord</span></code> 合约的 <code class="docutils literal"><span class="pre">balance</span></code> ，即调用合约成功执行后，将增加 <code class="docutils literal"><span class="pre">balance</span></code> 余额。</p>
+<p>编写Solidity合约代码的详细说明可参考 <a class="reference external" href="http://solidity.readthedocs.io/en/develop/">Solidity官方开发指南</a>。</p>
+</div>
+<div class="section" id="id4">
+<h2>编译合约<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>首先我们需要安装Solidity编译器，安装编译器有多种不同的方法，我们推荐安装 <code class="docutils literal"><span class="pre">solc</span></code> 编译器稳定版，具体操作如下：</p>
+<div class="highlight-shell"><div class="highlight"><pre>sudo add-apt-repository ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install solc
+</pre></div>
+</div>
+<p>其他安装编译器的方法可以参考 <a class="reference external" href="https://solidity.readthedocs.io/en/latest/installing-solidity.html#building-from-source">Solidity编译安装介绍</a>。</p>
+<p>然后使用 <code class="docutils literal"><span class="pre">sloc</span></code> 编译器命令将合约程序编译成字节码：</p>
+<div class="highlight-shell"><div class="highlight"><pre>solc HelloWorld.sol --bin
+</pre></div>
+</div>
+<p>智能合约编译完成后，将输出如下：</p>
+<div class="highlight-none"><div class="highlight"><pre>======= HelloWorld.sol:HelloWorld =======
+Binary:
+6060604052341561000f57600080fd5b5b60f08061001e6000396000f30060606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806382ab890a14603d575b600080fd5b3415604757600080fd5b605b600480803590602001909190505060a4565b604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390f35b60008082600080828254019250508190555033600054915091505b9150915600a165627a7a72305820b88062f2366288fcc87eb44079fcc26956e4c806546ad0e75b6927d14de63d950029
+</pre></div>
+</div>
+<p>生成智能合约函数调用的Hash值的命令如下：</p>
+<div class="highlight-shell"><div class="highlight"><pre>solc HelloWorld.sol --hashes
+</pre></div>
+</div>
+<p>其输出如下：</p>
+<div class="highlight-none"><div class="highlight"><pre>======= HelloWorld.sol:HelloWorld =======
+Function signatures:
+82ab890a: update(uint256)
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>创建合约<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>在CITA中是使用 <code class="docutils literal"><span class="pre">JSON-PRC</span></code> 来发送交易的，发送创建合约交易之前，首先需要构造创建合约的Json配置文件 <code class="docutils literal"><span class="pre">config_create.json</span></code> ，其内容如下：</p>
+<div class="highlight-none"><div class="highlight"><pre>{
+    &quot;category&quot;: 1,
+    &quot;ipandport&quot;: [
+        &quot;127.0.0.1:1340&quot;
+    ],
+    &quot;txnum&quot;: 1,
+    &quot;threads&quot;: 1,
+    &quot;code&quot;: &quot;6060604052341561000f57600080fd5b5b60f08061001e6000396000f30060606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806382ab890a14603d575b600080fd5b3415604757600080fd5b605b600480803590602001909190505060a4565b604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390f35b60008082600080828254019250508190555033600054915091505b9150915600a165627a7a72305820b88062f2366288fcc87eb44079fcc26956e4c806546ad0e75b6927d14de63d950029&quot;
+}
+</pre></div>
+</div>
+<p>其中 <code class="docutils literal"><span class="pre">category</span></code> 只有两种取值，等于1时表示创建合约，等于2时表示调用合约； <code class="docutils literal"><span class="pre">ipandport</span></code> 表示接收该交易的节点IP地址和端口； <code class="docutils literal"><span class="pre">txnum</span></code> 表示发送的交易个数，该配置是为了以后兼容批量交易而预留的扩展接口； <code class="docutils literal"><span class="pre">threads</span></code> 表示执行该交易启动的线程个数；而 <code class="docutils literal"><span class="pre">code</span></code> 表示编译合约后生成的字节码，即上述编译合约输出的 <code class="docutils literal"><span class="pre">Binary</span></code> 。</p>
+<p>然后使用以下命令创建智能合约：</p>
+<div class="highlight-shell"><div class="highlight"><pre>trans_evm --config<span class="o">=</span>config_create.json
+</pre></div>
+</div>
+<p>执行成功后，便会经过CITA系统的处理，然后返回创建合约交易的执行结果。</p>
+</div>
+<div class="section" id="id7">
+<h2>调用合约<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>同理，为了使用 <code class="docutils literal"><span class="pre">JSON-PRC</span></code> 调用合约，需要构造调用合约的Json配置文件 <code class="docutils literal"><span class="pre">config_call.json</span></code> ，其内容如下：</p>
+<div class="highlight-none"><div class="highlight"><pre>{
+    &quot;category&quot;: 2,
+    &quot;ipandport&quot;: [
+        &quot;127.0.0.1:1340&quot;
+    ],
+    &quot;txnum&quot;: 1,
+    &quot;threads&quot;: 1,
+    &quot;code&quot;: &quot;82ab890a0000000000000000000000000000000000000000000000000000000012345678&quot;
+}
+</pre></div>
+</div>
+<p>其中需要注意的是 <code class="docutils literal"><span class="pre">category</span></code> 等于2表示调用合约，而 <code class="docutils literal"><span class="pre">code</span></code> 一般是由合约函数名Hash和它对应的参数值组成的，如果该函数没有参数，则仅仅使用函数名Hash即可。例如上述示例中合约函数名Hash即输出 <code class="docutils literal"><span class="pre">Function</span> <span class="pre">signatures</span></code> 下的 <code class="docutils literal"><span class="pre">update(uint256)</span></code> 对应的Hash值，占前面32比特，其中函数名为 <code class="docutils literal"><span class="pre">update</span></code> ，参数类型为 <code class="docutils literal"><span class="pre">uint256</span></code>，而参数部分是将参数按位数补齐并序列化，占后面256比特。如果函数包含多个参数，每个参数都占256比特，且参数按照函数的参数顺序排列。</p>
+<p>然后使用以下命令调用智能合约：</p>
+<div class="highlight-shell"><div class="highlight"><pre>trans_evm --config<span class="o">=</span>config_call.json
+</pre></div>
+</div>
+<p>执行成功后，便会经过CITA系统的处理，然后返回调用合约交易的执行结果。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nodes_lists.html" class="btn btn-neutral float-right" title="节点白名单管理" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rpc.html" class="btn btn-neutral" title="RPC 调用" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2017, Cryptape.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

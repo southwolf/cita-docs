@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>系统架构 &mdash; CITA 0.8 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CITA 0.8 文档" href="index.html"/>
+        <link rel="next" title="共识" href="consensus.html"/>
+        <link rel="prev" title="配额管理" href="quota_manager.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CITA
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">依赖</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id4">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id5">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id6">运行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id7">验证</a></li>
+</ul>
+<p class="caption"><span class="caption-text">主要概念</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html">区块链</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">CITA</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统组件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc_model.html">服务网关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_model.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chain_model.html">链（Chain）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contract_model.html">合约引擎（Contract Engine）</a></li>
+</ul>
+<p class="caption"><span class="caption-text">使用指南</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc.html">RPC 调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smart_contract.html">智能合约指南</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统管理</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nodes_lists.html">节点白名单管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_nodes_manager.html">共识节点管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_manager.html">账号管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quota_manager.html">配额管理</a></li>
+</ul>
+<p class="caption"><span class="caption-text">架构设计</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">系统架构</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">微服务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#protocolbuffer">ProtocolBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#block">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transaction">Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="consensus.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transaction_process.html">交易处理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view.html">视图</a></li>
+</ul>
+<p class="caption"><span class="caption-text">附录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">版本发布说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">贡献代码</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CITA</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>系统架构</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/architecture.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>系统架构<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>微服务<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>联盟链在交易吞吐量低、交易实时性上很难满足行业应用的要求。另外，区块链
+技术发展迅速，单体应用也很难满足演进要求。</p>
+<p>为了解决这两个问题， CITA将单个节点按照功解构为交易共识、合约引擎、链
+式存储、网络同步、服务网关等多个松耦合的微服务，一方面利用云计算基础设
+施来按需提升性能，另一方面，各个组件可独立替换升级。</p>
+<p>另外，采用消息总线进行通信，各个微服务可以利用异步消息简化处理，又可以
+确保消息的安全、可靠送达。当与外部系统集成时，外部系统可以直接访问消息
+总线，而无需CITA做适配。</p>
+<div class="figure align-center" id="id3">
+<img alt="map to buried treasure" src="_images/microservice-architecture.png" />
+<p class="caption"><span class="caption-text">CITA微服务架构</span></p>
+</div>
+</div>
+<div class="section" id="protocolbuffer">
+<h2>ProtocolBuffer<a class="headerlink" href="#protocolbuffer" title="永久链接至标题">¶</a></h2>
+<p><a class="reference internal" href="#protocolbuffer">ProtocolBuffer</a> 是一种用于序列化结构数据的语言无关、平台无关的扩展机制，
+经常被用于跨进程、跨机器的应用程序间的数据通信，特别是微服务间的数据通
+信。它的编译器接受接口描述语言（<a class="reference external" href="https://en.wikipedia.org/wiki/Interface_description_language">IDL</a>）作为输入，通过不同语言的插件，可以编译
+成各自语言的本地代码。</p>
+<p>CITA采用了ProtocolBuffer作为数据序列化的方法。一方面，序列化/反序列化
+性能高，另一方面，不同微服务间可以通过接口描述语言很方便的集成到CITA的
+微服务架构中。</p>
+</div>
+<div class="section" id="block">
+<h2>Block<a class="headerlink" href="#block" title="永久链接至标题">¶</a></h2>
+<p>Block 结构</p>
+<ul class="simple">
+<li>version: u32</li>
+<li>header: BlockHeader 结构</li>
+<li>body: BlockBody 结构</li>
+</ul>
+<p>BlockHeader 结构</p>
+<ul class="simple">
+<li>prevhash: 上一个块的 Keccak 256-bit 哈希值</li>
+<li>timestamp: Unix 时间戳</li>
+<li>proof: Proof 结构，出块人签名</li>
+<li>commit: Commit 结构，Chain处理结果</li>
+<li>height: uint64 块号</li>
+</ul>
+<p>BlockBody 结构</p>
+<ul class="simple">
+<li>transactions: 交易列表</li>
+</ul>
+<p>Commit 结构</p>
+<ul class="simple">
+<li>stateRoot: Keccak 256-bit，状态root</li>
+<li>transactionsRoot: Keccak 256-bit，交易列表root</li>
+<li>receiptsRoot: Keccak 256-bit，交易回执root</li>
+</ul>
+</div>
+<div class="section" id="transaction">
+<h2>Transaction<a class="headerlink" href="#transaction" title="永久链接至标题">¶</a></h2>
+<p>Transaction 结构</p>
+<ul class="simple">
+<li>to: 160-bit address；如果为空表示创建合约</li>
+<li>content: bytes，交易 data</li>
+<li>valid_until_block: 交易超时设置</li>
+<li>signature: bytes，签名</li>
+<li>crypto: 签名类型</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="consensus.html" class="btn btn-neutral float-right" title="共识" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quota_manager.html" class="btn btn-neutral" title="配额管理" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2017, Cryptape.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

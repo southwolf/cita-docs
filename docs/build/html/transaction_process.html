@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>交易处理 &mdash; CITA 0.8 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CITA 0.8 文档" href="index.html"/>
+        <link rel="next" title="视图" href="view.html"/>
+        <link rel="prev" title="共识" href="consensus.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CITA
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">依赖</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id4">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id5">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id6">运行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id7">验证</a></li>
+</ul>
+<p class="caption"><span class="caption-text">主要概念</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html">区块链</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">CITA</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统组件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc_model.html">服务网关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_model.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chain_model.html">链（Chain）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contract_model.html">合约引擎（Contract Engine）</a></li>
+</ul>
+<p class="caption"><span class="caption-text">使用指南</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc.html">RPC 调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smart_contract.html">智能合约指南</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统管理</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nodes_lists.html">节点白名单管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_nodes_manager.html">共识节点管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_manager.html">账号管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quota_manager.html">配额管理</a></li>
+</ul>
+<p class="caption"><span class="caption-text">架构设计</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">系统架构</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus.html">共识</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">交易处理</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">交易验证</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">交易执行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">异步交易处理</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="view.html">视图</a></li>
+</ul>
+<p class="caption"><span class="caption-text">附录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">版本发布说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">贡献代码</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CITA</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>交易处理</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/transaction_process.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>交易处理<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>交易验证<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>CITA中交易通过消息总线进行转发，用户通过RPC模块和系统进行交互。RPC请求分为两种，一种是对链上状态进行查询的请求，一种是需要打包到区块中的交易。</p>
+<p>首先在RPC模块，对用户请求进行验证：</p>
+<ul class="simple">
+<li>是否符合服务规范（目前支持JSON-RPC 2.0）;</li>
+<li>服务API方法是否合法；</li>
+<li>参数个数和格式是否合法。</li>
+</ul>
+<p>如果验证通过，则根据请求类型发往不同模块。对于查询请求，发送到链模块，链模块解析请求，并执行然后返回结果。对于交易，则发送到共识模块，共识模块最终形成共识后，发送到链模块，链模块的验证如下：</p>
+<ul class="simple">
+<li>验证区块格式是否正确<ul>
+<li>PreHash是否正确；</li>
+<li>区块签名是否正确；</li>
+<li>签名个数是否满足。</li>
+</ul>
+</li>
+<li>执行交易时，需要验证<ul>
+<li>交易签名是否合法；</li>
+<li>是否拥有权限；</li>
+<li>发送人是否有足够的配额；</li>
+<li>交易是否为重复交易。</li>
+</ul>
+</li>
+</ul>
+<p>交易验证成功则正常执行，验证失败则将错误信息，保持在交易回执中。CITA中交易处理具有原子性，当交易在执行过程中发生错误，整个交易状态会回滚。</p>
+<div class="figure align-center" id="id5">
+<img alt="_images/tx_validator.png" src="_images/tx_validator.png" />
+<p class="caption"><span class="caption-text">交易验证</span></p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>交易执行<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>对于查询请求，用户通过RPC模块进行请求，首先对交易格式进行验证，验证成功后发送到链／网络模块，验证失败则直接返回失败结果；链／网络模块收到请求之后，进行查询，再将结果返回给RPC模块；最后，RPC将结果返回给用户。</p>
+<p>对于交易，RPC模块收到交易请求，首先对交易的格式进行验证，验证成功后发送给共识模块；共识模块首先将交易保存在交易池中，待共识出块时从交易池中获取交易，共识完成后将包含交易的区块发送给链模块。
+对于从其他节点收到的交易，通过Network收到后，发送给共识模块，共识模块做相同的处理。</p>
+<p>链模块收到共识后的区块之后，首先对区块合法性做必要的验证，验证通过后执行交易并将执行结果存储到本地；待区块内所有的交易执行完成后，将区块、交易、修改状态、交易回执等持久化到数据库中；最后链模块更新状态，并通知共识模块。</p>
+<div class="figure align-center" id="id6">
+<img alt="_images/tx_proc.png" src="_images/tx_proc.png" />
+<p class="caption"><span class="caption-text">交易入链</span></p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>异步交易处理<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>区块链节点的最主要职责包括点对点网络交互、共识、交易处理以及数据存储四个方面。节点通过共识算法，在系统中形成对交易排序的全局共识，再按照共识
+后的顺序对交易进行逐个处理。只要处理过程能保证确定性，所有节点最后都能达到一致的状态，产生相同的本地数据。</p>
+<p>在当前的区块链设计中，共识与交易处理耦合程度较高，共识的性能受到交易处理能力的影响。
+CITA将共识与交易处理解耦为独立的微服务，共识服务只负责交易排序，并不关心交易内容，交易处理服务只负责对排好顺序的交易进行处理。
+此时共识过程可以先于交易处理完成，交易处理服务可以异步执行。异步交易处理技术不仅使CITA具有更好的共识性能，还带来了更有弹性的交易处理能力，
+交易负荷可以被更均匀的分摊到一段时间内。</p>
+<p>由于交易异步处理，在共识前只能对交易进行有限的检查，例如签名验证。无效的交易有可能通过共识进入交易处理服务，产生一定程度的垃圾数据。
+在有必要的情况下，可以通过CITA的交易控制或者垃圾清理技术解决该问题。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="view.html" class="btn btn-neutral float-right" title="视图" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="consensus.html" class="btn btn-neutral" title="共识" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2017, Cryptape.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

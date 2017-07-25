@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>依赖 &mdash; CITA 0.8 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CITA 0.8 文档" href="index.html"/>
+        <link rel="next" title="区块链" href="blockchain.html"/>
+        <link rel="prev" title="介绍" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CITA
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">快速入门</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">依赖</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">系统平台要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">安装依赖包</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rust">安装Rust</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python">安装Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id4">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id5">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id6">运行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id7">验证</a></li>
+</ul>
+<p class="caption"><span class="caption-text">主要概念</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html">区块链</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">CITA</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统组件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc_model.html">服务网关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_model.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chain_model.html">链（Chain）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contract_model.html">合约引擎（Contract Engine）</a></li>
+</ul>
+<p class="caption"><span class="caption-text">使用指南</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc.html">RPC 调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smart_contract.html">智能合约指南</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统管理</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nodes_lists.html">节点白名单管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_nodes_manager.html">共识节点管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_manager.html">账号管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quota_manager.html">配额管理</a></li>
+</ul>
+<p class="caption"><span class="caption-text">架构设计</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">系统架构</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transaction_process.html">交易处理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view.html">视图</a></li>
+</ul>
+<p class="caption"><span class="caption-text">附录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">版本发布说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">贡献代码</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CITA</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>依赖</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/getting_started.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>依赖<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>系统平台要求<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>CITA的运行环境是Linux和OSX操作系统，目前不支持Windows系统。CITA是基于Ubuntu 16.04稳定版开发的，在该系统版本上运行将是正确无误的。如果在Linux系统的其他版本上运行出现问题，建议将系统版本切换到Ubuntu 16.04版本。</p>
+</div>
+<div class="section" id="id3">
+<h2>安装依赖包<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>CITA中引用了一些Linux外部库，所以需要安装相关的依赖库，其命令如下：</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install --force-yes libsnappy1v5 libsnappy-dev  capnproto  libgoogle-perftools-dev  libssl-dev libudev-dev  rabbitmq-server  google-perftools jq
+</pre></div>
+</div>
+</div>
+<div class="section" id="rust">
+<h2>安装Rust<a class="headerlink" href="#rust" title="永久链接至标题">¶</a></h2>
+<p>CITA中使用的是Rust 1.20.0版本，具体为 <code class="docutils literal"><span class="pre">rustc</span> <span class="pre">1.20.0-nightly</span></code> （即更新日期为2017-06-29的Rust版本)，我们推荐使用 <code class="docutils literal"><span class="pre">rustup</span></code> 安装Rust，如果还没有安装过 <code class="docutils literal"><span class="pre">rustup</span></code> ，可以使用以下命令进行安装：</p>
+<div class="highlight-python"><div class="highlight"><pre>curl https://sh.rustup.rs -sSf | sh
+</pre></div>
+</div>
+<p>安装完成后，为了使用Rust的相关命令，需要将已安装Rust的 <code class="docutils literal"><span class="pre">bin</span></code> 目录添加到 <code class="docutils literal"><span class="pre">PATH</span></code> 环境变量中，而 <code class="docutils literal"><span class="pre">~/.cargo/env</span></code> 中重新设置了 <code class="docutils literal"><span class="pre">PATH</span></code> ，使用以下命令让其生效即可：</p>
+<div class="highlight-python"><div class="highlight"><pre>source ~/.cargo/env
+</pre></div>
+</div>
+<p>由于CITA在开发时使用的是 <code class="docutils literal"><span class="pre">Rust</span> <span class="pre">nightly-2017-06-29</span></code> 版本，而Rust的官方版本更新较快，如果直接使用官方版本可能导致一些兼容性的问题，所以建议切换到指定版本，在后续的CITA新版本中，我们也将尽可能地兼容Rust新版本的新特性，其安装命令如下：</p>
+<div class="highlight-shell"><div class="highlight"><pre>rustup toolchain install nightly-2017-06-29
+</pre></div>
+</div>
+<p>由于Rust默认使用的是 <code class="docutils literal"><span class="pre">stable</span></code> 版本，所以我们需要将Rust切换到指定的 <code class="docutils literal"><span class="pre">nightly</span></code> 版本，首先要找到刚才安装的Rust版本信息，其查看已安装的版本命令如下：</p>
+<div class="highlight-python"><div class="highlight"><pre>rustup show
+</pre></div>
+</div>
+<p>从显示的 <code class="docutils literal"><span class="pre">installed</span> <span class="pre">toolchains</span></code> 条目中找到我们刚才安装的Rust版本 <code class="docutils literal"><span class="pre">nightly-2017-06-29-x86_64-unknown-linux-gnu</span></code> ，将其设置为默认的Rust版本：</p>
+<div class="highlight-shell"><div class="highlight"><pre>rustup default nightly-2017-06-29-x86_64-unknown-linux-gnu
+</pre></div>
+</div>
+</div>
+<div class="section" id="python">
+<h2>安装Python<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h2>
+<p>CITA的启动脚本是由Python语言写的，因此如果操作系统还没有安装Python，可以根据以下命令进行安装：</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python
+</pre></div>
+</div>
+<p>经过如上设置，CITA的依赖便安装完成了。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h1>安装<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h1>
+<p>从Github仓库下载CITA的源代码，然后切换到CITA的源代码目录</p>
+<div class="highlight-python"><div class="highlight"><pre>cd cita
+</pre></div>
+</div>
+<p>对CITA进行相关初始化，并对引用的依赖Parity进行下载和更新</p>
+<div class="highlight-python"><div class="highlight"><pre>make setup
+</pre></div>
+</div>
+<p>可以按照自己的需求自行选择相应的编译方式（Debug-调试模式 或 Release-发行模式）</p>
+<div class="highlight-python"><div class="highlight"><pre>make debug
+</pre></div>
+</div>
+<p>或者</p>
+<div class="highlight-python"><div class="highlight"><pre>make release
+</pre></div>
+</div>
+<p>编译成功后，其生成的可执行文件将放在 <code class="docutils literal"><span class="pre">cita/admintool/release/bin</span></code> 目录下。</p>
+</div>
+<div class="section" id="id5">
+<h1>配置<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h1>
+<p>启动的公共脚本位于 <code class="docutils literal"><span class="pre">cita/admintool</span></code> 目录，主要用来创建创世块配置、节点相关配置、网络连接配置、私钥配置等相关文件。启动之前执行相关的初始化操作，其命令如下：</p>
+<div class="highlight-python"><div class="highlight"><pre>./setup.sh
+</pre></div>
+</div>
+<p>设置节点的配置信息，该默认示例Demo中配置了4个节点，对Demo中的节点进行默认初始化的操作命令为：</p>
+<div class="highlight-python"><div class="highlight"><pre>./admintool.sh
+</pre></div>
+</div>
+<p>此外，用户可以根据需要更改其中的默认配置，使用命令 <code class="docutils literal"><span class="pre">./admintool.sh</span> <span class="pre">-h</span></code> 来获得详细帮助，允许自定义配置包括：</p>
+<ul class="simple">
+<li>系统管理员账户</li>
+<li>网络列表，按照 <code class="docutils literal"><span class="pre">IP1:PORT1,IP2:PORT2,IP3:PORT3</span> <span class="pre">...</span> <span class="pre">IPn:PORTn</span></code> 的格式</li>
+<li>共识算法选择，可供选择的有 <code class="docutils literal"><span class="pre">tendermint</span></code> 、 <code class="docutils literal"><span class="pre">raft</span></code> 和 <code class="docutils literal"><span class="pre">poa</span></code></li>
+<li>加密方法选择</li>
+<li>出块时间间隔</li>
+<li>单数据块中交易数量限制</li>
+<li>累积多少历史交易量后进行重复交易的检查</li>
+</ul>
+<p>节点初始化操作成功后，将在 <code class="docutils literal"><span class="pre">cita/admintool/release</span></code> 下生成节点的Demo目录和相关配置文件，其生成的节点目录为 <code class="docutils literal"><span class="pre">node0</span></code> 、 <code class="docutils literal"><span class="pre">node1</span></code> 、 <code class="docutils literal"><span class="pre">node2</span></code> 和 <code class="docutils literal"><span class="pre">node3</span></code> ，其对应的目录如下：</p>
+<ul class="simple">
+<li>cita/admintool/release/node0</li>
+<li>cita/admintool/release/node1</li>
+<li>cita/admintool/release/node2</li>
+<li>cita/admintool/release/node3</li>
+</ul>
+<p>进入对应节点的目录，便可以使用 <code class="docutils literal"><span class="pre">cita</span></code> 命令对节点进行启动和停止等操作了。</p>
+</div>
+<div class="section" id="id6">
+<h1>运行<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h1>
+<p>启动节点的服务步骤都是相同的，以 <code class="docutils literal"><span class="pre">node0</span></code> 为例，其启动CITA节点的具体步骤为：</p>
+<p>1）启动节点 <code class="docutils literal"><span class="pre">node0</span></code> 之前需进行初始化：</p>
+<div class="highlight-none"><div class="highlight"><pre>cita setup 0
+</pre></div>
+</div>
+<p>2）启动节点 <code class="docutils literal"><span class="pre">node0</span></code> 的服务：</p>
+<div class="highlight-none"><div class="highlight"><pre>cita start 0
+</pre></div>
+</div>
+<p>而停止节点 <code class="docutils literal"><span class="pre">node0</span></code> 服务只需执行以下操作：</p>
+<div class="highlight-none"><div class="highlight"><pre>cita stop 0
+</pre></div>
+</div>
+<p>此外， <code class="docutils literal"><span class="pre">cita</span></code> 命令中还包括其他操作，具体使用可以查看相关说明：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">cita</span>
+</pre></div>
+</div>
+<p>除了上述的基本操作命令，为了方便用户对Demo进行相关测试，我们在目录 <code class="docutils literal"><span class="pre">cita/tests/integreate_test</span></code> 下提供了一些测试脚本。
+例如，测试所有节点服务启动并成功出块，然后停止节点服务的操作为：</p>
+<div class="highlight-python"><div class="highlight"><pre>./cita_start.sh
+</pre></div>
+</div>
+<p>停止所有节点服务的命令为：</p>
+<div class="highlight-python"><div class="highlight"><pre>./cita_stop.sh
+</pre></div>
+</div>
+<p>备注：以上示例Demo的节点启动都是位于同一台机器上，如果需要部署到不同的服务器上，只需将节点客户化操作已经完成的节点（即 <code class="docutils literal"><span class="pre">cita/admintool/release/node{节点号}</span></code> 目录），拷贝到其他服务器上运行即可。</p>
+</div>
+<div class="section" id="id7">
+<h1>验证<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li>查询节点个数</li>
+</ul>
+<p>Request:</p>
+<div class="highlight-python"><div class="highlight"><pre>curl -X POST --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;net_peerCount&quot;,&quot;params&quot;:[],&quot;id&quot;:74}&#39; 127.0.0.1:1337 | jq
+</pre></div>
+</div>
+<p>Result:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s">&quot;2.0&quot;</span><span class="p">,</span>
+  <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="mi">74</span><span class="p">,</span>
+  <span class="s">&quot;result&quot;</span><span class="p">:</span> <span class="s">&quot;0x3&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>查询当前块高度。</li>
+</ul>
+<p>Request:</p>
+<div class="highlight-python"><div class="highlight"><pre>curl -X POST --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;cita_blockNumber&quot;,&quot;params&quot;:[],&quot;id&quot;:83}&#39; 127.0.0.1:1337 | jq
+</pre></div>
+</div>
+<p>Result:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s">&quot;2.0&quot;</span><span class="p">,</span>
+  <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="mi">83</span><span class="p">,</span>
+  <span class="s">&quot;result&quot;</span><span class="p">:</span> <span class="s">&quot;0x8&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回块高度，表示节点已经开始正常出块。</p>
+<p>更多API（如合约调用、交易查询）请参见 <a class="reference external" href="rpc.html">RPC调用</a>。</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="blockchain.html" class="btn btn-neutral float-right" title="区块链" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="介绍" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2017, Cryptape.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

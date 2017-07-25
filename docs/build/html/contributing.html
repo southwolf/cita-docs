@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>贡献代码 &mdash; CITA 0.8 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CITA 0.8 文档" href="index.html"/>
+        <link rel="prev" title="版本发布说明" href="releases.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CITA
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">依赖</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id4">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id5">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id6">运行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html#id7">验证</a></li>
+</ul>
+<p class="caption"><span class="caption-text">主要概念</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html">区块链</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">CITA</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统组件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc_model.html">服务网关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_model.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chain_model.html">链（Chain）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contract_model.html">合约引擎（Contract Engine）</a></li>
+</ul>
+<p class="caption"><span class="caption-text">使用指南</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rpc.html">RPC 调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smart_contract.html">智能合约指南</a></li>
+</ul>
+<p class="caption"><span class="caption-text">系统管理</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nodes_lists.html">节点白名单管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus_nodes_manager.html">共识节点管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_manager.html">账号管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quota_manager.html">配额管理</a></li>
+</ul>
+<p class="caption"><span class="caption-text">架构设计</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">系统架构</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consensus.html">共识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transaction_process.html">交易处理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view.html">视图</a></li>
+</ul>
+<p class="caption"><span class="caption-text">附录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">版本发布说明</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">贡献代码</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CITA</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>贡献代码</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/contributing.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>贡献代码<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>CITA是一个开源项目，任何人都可以参与CITA并贡献代码。</p>
+<p>以下是参与CITA并贡献的具体流程：</p>
+<p><strong>1. 复制CITA到自己的仓库中 (Fork repository)</strong></p>
+<p>首先，进入CITA的Github主页，点击右上角的Fork按钮将CITA复制到自己的Github仓库。</p>
+<p>Fork完成后，进入自己的Github主页查看是否已经存在CITA，若存在，说明Fork成功。</p>
+<p><strong>2. 创建新的分支 (Create new branch)</strong></p>
+<p>从自己的Github主页中进入CITA仓库，点击右侧的Clone or download按钮，复制HTTPS链接。</p>
+<p>然后在本地终端使用 <code class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;上一步复制的链接&gt;</span></code> 命令将该项目下载到本地。</p>
+<p>下载成功后，使用 <code class="docutils literal"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">&lt;new</span> <span class="pre">branch</span> <span class="pre">name&gt;</span></code> 命令创建新分支并切换到该分支。</p>
+<p>分支名应尽量简洁并能体现出该分支完成的工作。</p>
+<p><strong>3. 提交修改 (Commit changes)</strong></p>
+<p>这时就可以在这条分支下贡献自己的代码或对CITA进行修改完善，然后通过 <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;commit</span> <span class="pre">message&quot;</span></code> 将修改提交到本地git仓库中(在提交之前，首先通过git add命令添加修改文件到暂存区)。</p>
+<p>新增的代码编码风格参照项目主分支风格，尽量保持于主分支编码风格相同。</p>
+<p>通常来说，每次提交应该是原子性的并且修改要容易阅读，尽量避免将文本格式的修改和代码位置的转移与实际的修改代码混淆。</p>
+<p>提交信息（Commit message）应该尽量简短精确，并且应该加上修改或新增的文件所在包名作为前缀。</p>
+<p><strong>4. 将修改上传到你的仓库 (Push changes to your fork)</strong></p>
+<p>在本地提交修改并确认无误之后，便可以使用 <code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">&lt;branch</span> <span class="pre">name&gt;</span></code> 命令上传这些修改到自己的仓库。</p>
+<p><strong>5. 创建并提交PR (Create pull request)</strong></p>
+<p>在同步完成后，即可通过Create pull request按钮将该分支发送给该项目的维护者等待被合并。如果你的Pull request修复了在Issues中描述的问题，可以使用 <a class="reference external" href="https://help.github.com/articles/closing-issues-via-commit-messages/">special magic keyword</a> 引用该Issue为参考</p>
+<p>一个Pull request应该只关注于一件事情，如添加功能，修补bug，重构代码。尽量避免包含这些不同的事情的混杂的Pull request，因为这些Pull request一般内容较多且非常复杂，维护者阅读或者贡献者回过头来查看的时候会造成许多麻烦。</p>
+<p>当你的PR被维护者接受并准备合并时，你可能会被要求rebase你的提交，rebase的流程如下所示：</p>
+<div class="highlight-sh"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre>git checkout &lt;your branch name&gt;
+git rebase -i HEAD~n
+<span class="c"># n is normally the number of commits in the pull</span>
+<span class="c"># set commits from &#39;pick&#39; to &#39;squash&#39;, save and quit</span>
+<span class="c"># on the next screen, edit/refine commit messages</span>
+<span class="c"># save and quit</span>
+git push -f
+<span class="c"># (force push to GitHub)</span>
+</pre></div>
+</td></tr></table></div>
+<p>在添加一个新功能的时候，必须考虑到对该功能的长期维护，在提交一个新功能的时候，你必须考虑清楚自己是否会在将来长期维护它（包括修复bug），那些在未来没有得到有效维护的功能，可能会被项目的维护者移除</p>
+<p>重构的PR不应该改变原先这部分代码的行为（就算是这部分代码中存在bug），如果要修复bug，应该在另外一个Pull request中提出。</p>
+<p><strong>总的来说，所有的Pull request应该：</strong></p>
+<ul class="simple">
+<li>有明确的方向，修复一个显而易见的bug或者优化项目的一个特性（如模块化重构）</li>
+<li>再次查看时应该清晰易读</li>
+<li>在合适的地方有单元测试</li>
+<li>遵循主分支编码风格</li>
+<li>不要破坏已有的测试套件</li>
+</ul>
+<p>CITA 是采用Rust语言编写而成，若要在本机上编译并调试源码，请参考 <a class="reference external" href="dependencies.html">安装依赖</a></p>
+<p>以上步骤，如有对git命令不熟悉的，请参考 <a class="reference external" href="https://git-scm.com/doc">git使用手册</a></p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="releases.html" class="btn btn-neutral" title="版本发布说明" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2017, Cryptape.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
